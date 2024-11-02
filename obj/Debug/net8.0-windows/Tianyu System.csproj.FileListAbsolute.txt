@@ -1,0 +1,39 @@
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.csproj.AssemblyReference.cache
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Styles\ButtonStyles.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Styles\Colors.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\HomePage.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\HomePage.g.cs
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System_MarkupCompile.cache
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System_MarkupCompile.lref
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\GamesPage.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\HomeworkPage.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\SettingsPage.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\GamesPage.g.cs
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\HomeworkPage.g.cs
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\SettingsPage.g.cs
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\Tianyu System.exe
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\Tianyu System.deps.json
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\Tianyu System.runtimeconfig.json
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\Tianyu System.dll
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\Tianyu System.pdb
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Administrator\Projects\Tianyu System\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\App.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.g.resources
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.AssemblyInfoInputs.cache
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.AssemblyInfo.cs
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu S.54F50CDE.Up2Date
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.dll
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\refint\Tianyu System.dll
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.pdb
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Tianyu System.genruntimeconfig.cache
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\ref\Tianyu System.dll
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\Game2048Window.baml
+C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\Views\Game2048Window.g.cs

@@ -1,0 +1,30 @@
+<Page x:Class="Tianyu_System.Views.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="设置">
+    <StackPanel Margin="20">
+        <TextBlock Text="设置"
+                 FontSize="24"
+                 Margin="0,0,0,20"/>
+                 
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Text="显示头像"
+                     VerticalAlignment="Center"
+                     FontSize="16"/>
+                     
+            <ToggleButton x:Name="ShowAvatarToggle"
+                        Grid.Column="1"
+                        Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                        ToolTip="启用/禁用头像显示"
+                        IsChecked="False"
+                        Checked="ShowAvatarToggle_Checked"
+                        Unchecked="ShowAvatarToggle_Unchecked"/>
+        </Grid>
+    </StackPanel>
+</Page> 

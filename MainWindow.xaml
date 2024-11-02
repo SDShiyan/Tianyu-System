@@ -1,0 +1,158 @@
+﻿<Window x:Class="Tianyu_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tianyu_System"
+        mc:Ignorable="d"
+        Title="天宇系统" Height="720" Width="1280"
+        WindowStyle="None"
+        Background="Transparent"
+        Icon="/Images/icon.png"
+        AllowsTransparency="True">
+    <Border Background="{StaticResource WindowBackgroundBrush}" 
+            CornerRadius="8"
+            BorderThickness="1"
+            BorderBrush="#E5E5E5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 标题栏 -->
+            <Grid x:Name="TitleBar" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Horizontal" Margin="12,0,0,0">
+                    <Image Source="/Images/icon.png" 
+                           Width="16" 
+                           Height="16" 
+                           Margin="0,0,8,0"/>
+                    <TextBlock Text="天宇系统" 
+                             VerticalAlignment="Center"
+                             Foreground="{StaticResource PrimaryTextBrush}"/>
+                </StackPanel>
+                
+                <!-- 窗口控制按钮 -->
+                <StackPanel Grid.Column="2" 
+                          Orientation="Horizontal"
+                          HorizontalAlignment="Right">
+                    <Button x:Name="MinButton" 
+                            Style="{StaticResource WindowControlButton}"
+                            Click="MinButton_Click">
+                        <Path Data="M 0,0 H 10" 
+                              Stroke="{StaticResource PrimaryTextBrush}" 
+                              StrokeThickness="1"/>
+                    </Button>
+                    <Button x:Name="MaxButton"
+                            Style="{StaticResource WindowControlButton}"
+                            Click="MaxButton_Click">
+                        <Rectangle Width="10" 
+                                 Height="10" 
+                                 Stroke="{StaticResource PrimaryTextBrush}"
+                                 StrokeThickness="1"/>
+                    </Button>
+                    <Button x:Name="CloseButton"
+                            Style="{StaticResource WindowControlButton}"
+                            Click="CloseButton_Click">
+                        <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" 
+                              Stroke="{StaticResource PrimaryTextBrush}"
+                              StrokeThickness="1"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!-- 主要内容 -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- 左侧导航栏 -->
+                <Border Background="{StaticResource SideBarBackgroundBrush}" 
+                        CornerRadius="0,0,0,8">
+                    <StackPanel>
+                        <!-- 主页 -->
+                        <Button Style="{StaticResource NavButton}"
+                                Height="60" 
+                                Margin="8,20,8,0"
+                                Click="NavButton_Click"
+                                Tag="HomePage">
+                            <StackPanel>
+                                <Image Source="/Images/home.png" 
+                                       Width="24" 
+                                       Height="24"/>
+                                <TextBlock Text="主页" 
+                                         FontSize="12"
+                                         Margin="0,4,0,0"
+                                         Foreground="{StaticResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 作业 -->
+                        <Button Style="{StaticResource NavButton}"
+                                Height="60" 
+                                Margin="8,8,8,0"
+                                Click="NavButton_Click"
+                                Tag="HomeworkPage">
+                            <StackPanel>
+                                <Image Source="/Images/homework.png" 
+                                       Width="24" 
+                                       Height="24"/>
+                                <TextBlock Text="作业" 
+                                         FontSize="12"
+                                         Margin="0,4,0,0"
+                                         Foreground="{StaticResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 游戏 -->
+                        <Button Style="{StaticResource NavButton}"
+                                Height="60" 
+                                Margin="8,8,8,0"
+                                Click="NavButton_Click"
+                                Tag="GamesPage">
+                            <StackPanel>
+                                <Image Source="/Images/games.png" 
+                                       Width="24" 
+                                       Height="24"/>
+                                <TextBlock Text="游戏" 
+                                         FontSize="12"
+                                         Margin="0,4,0,0"
+                                         Foreground="{StaticResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 设置 -->
+                        <Button Style="{StaticResource NavButton}"
+                                Height="60" 
+                                Margin="8,8,8,0"
+                                Click="NavButton_Click"
+                                Tag="SettingsPage">
+                            <StackPanel>
+                                <Image Source="/Images/settings.png" 
+                                       Width="24" 
+                                       Height="24"/>
+                                <TextBlock Text="设置" 
+                                         FontSize="12"
+                                         Margin="0,4,0,0"
+                                         Foreground="{StaticResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+                <!-- 主要内容区域 -->
+                <Frame Grid.Column="1" 
+                       x:Name="MainFrame" 
+                       NavigationUIVisibility="Hidden"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
