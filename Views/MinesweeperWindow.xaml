@@ -1,0 +1,42 @@
+<Window x:Class="Tianyu_System.Views.MinesweeperWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="扫雷" Height="600" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel>
+            <TextBlock Text="剩余地雷: " 
+                     FontSize="20" 
+                     VerticalAlignment="Center"/>
+            <TextBlock x:Name="MinesLeftText" 
+                     Text="10" 
+                     FontSize="20" 
+                     VerticalAlignment="Center"/>
+            <TextBlock Text="时间: " 
+                     FontSize="20" 
+                     VerticalAlignment="Center"
+                     Margin="20,0,0,0"/>
+            <TextBlock x:Name="TimeText" 
+                     Text="0" 
+                     FontSize="20" 
+                     VerticalAlignment="Center"/>
+            <Button Content="重新开始" 
+                    Width="100"
+                    Height="35"
+                    Margin="20,0,0,0"
+                    Click="RestartButton_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
+        </DockPanel>
+
+        <UniformGrid x:Name="MineField" 
+                     Grid.Row="1" 
+                     Rows="9" 
+                     Columns="9"
+                     Margin="0,20,0,0"/>
+    </Grid>
+</Window> 

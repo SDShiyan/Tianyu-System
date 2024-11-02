@@ -15,5 +15,11 @@ namespace Tianyu_System.Views
             var game2048Window = new Game2048Window();
             game2048Window.Show();
         }
+
+        private void MinesweeperButton_Click(object sender, RoutedEventArgs e)
+        {
+            var minesweeperWindow = new MinesweeperWindow();
+            minesweeperWindow.Show();
+        }
     }
 } 

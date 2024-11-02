@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2wuTwCFWTrQ=",
+  "dgSpecHash": "V9TiedQDx28=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Projects\\Tianyu System\\Tianyu System.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Documents\\GitHub\\Tianyu-System\\Tianyu System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",

@@ -4,11 +4,18 @@
       Title="游戏">
     <Grid>
         <StackPanel HorizontalAlignment="Center" 
-                    VerticalAlignment="Center">
+                    VerticalAlignment="Center"
+                    Orientation="Vertical">
             <Button Content="2048" 
                     Width="200" 
                     Height="50"
+                    Margin="0,0,0,20"
                     Click="Game2048Button_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
+            <Button Content="扫雷" 
+                    Width="200" 
+                    Height="50"
+                    Click="MinesweeperButton_Click"
                     Style="{StaticResource MaterialDesignRaisedButton}"/>
         </StackPanel>
     </Grid>

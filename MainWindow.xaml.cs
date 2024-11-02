@@ -43,9 +43,23 @@ public partial class MainWindow : Window
 
     private void MaxButton_Click(object sender, RoutedEventArgs e)
     {
-        this.WindowState = this.WindowState == WindowState.Maximized 
-            ? WindowState.Normal 
-            : WindowState.Maximized;
+        if (this.WindowState == WindowState.Maximized)
+        {
+            this.WindowState = WindowState.Normal;
+        }
+        else
+        {
+            // 获取工作区大小（不包括任务栏）
+            var workArea = SystemParameters.WorkArea;
+            this.MaxHeight = workArea.Height;
+            this.MaxWidth = workArea.Width;
+            
+            // 设置窗口位置为工作区左上角
+            this.Left = workArea.Left;
+            this.Top = workArea.Top;
+            
+            this.WindowState = WindowState.Maximized;
+        }
     }
 
     private void CloseButton_Click(object sender, RoutedEventArgs e)

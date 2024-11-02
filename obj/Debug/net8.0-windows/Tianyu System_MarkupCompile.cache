@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Administrator\Projects\Tianyu System\obj\Debug\net8.0-windows\
+C:\Users\Administrator\Documents\GitHub\Tianyu-System\obj\Debug\net8.0-windows\
 Tianyu_System
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Administrator\Projects\Tianyu System\App.xaml
-81761706776
+C:\Users\Administrator\Documents\GitHub\Tianyu-System\App.xaml
+9-645212561
 
-11877897360
+12-925365126
 202178690155
-MainWindow.xaml;Styles\ButtonStyles.xaml;Styles\Colors.xaml;Views\Game2048Window.xaml;Views\GamesPage.xaml;Views\HomePage.xaml;Views\HomeworkPage.xaml;Views\SettingsPage.xaml;
+MainWindow.xaml;Styles\ButtonStyles.xaml;Styles\Colors.xaml;Views\Game2048Window.xaml;Views\GamesPage.xaml;Views\HomePage.xaml;Views\HomeworkPage.xaml;Views\MinesweeperWindow.xaml;Views\SettingsPage.xaml;
 
-False
+True
 

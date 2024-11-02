@@ -32,5 +32,29 @@ namespace Tianyu_System.Properties {
                 this["ShowAvatar"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999")]
+        public int MinesweeperBestTime {
+            get {
+                return ((int)(this["MinesweeperBestTime"]));
+            }
+            set {
+                this["MinesweeperBestTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Game2048BestScore {
+            get {
+                return ((int)(this["Game2048BestScore"]));
+            }
+            set {
+                this["Game2048BestScore"] = value;
+            }
+        }
     }
 } 

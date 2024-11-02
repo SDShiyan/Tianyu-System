@@ -5,5 +5,11 @@
     <Setting Name="ShowAvatar" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="MinesweeperBestTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">999999</Value>
+    </Setting>
+    <Setting Name="Game2048BestScore" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
   </Settings>
 </SettingsFile> 

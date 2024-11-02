@@ -2,15 +2,24 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using Tianyu_System.Properties;
 
 namespace Tianyu_System.Views
 {
+    internal class GameState
+    {
+        public required int[,] Board { get; init; }
+        public required int Score { get; init; }
+    }
+
     public partial class Game2048Window : Window
     {
-        private readonly int[,] board = new int[4, 4];
+        private int[,] board = new int[4, 4];
         private readonly Border[,] tiles = new Border[4, 4];
         private int score = 0;
         private readonly Random random = new Random();
+
+        private Stack<GameState> undoStack = new Stack<GameState>();
 
         public Game2048Window()
         {
@@ -21,17 +30,25 @@ namespace Tianyu_System.Views
             
             // 添加键盘事件
             KeyDown += Game2048Window_KeyDown;
+
+            // 显示最高分
+            BestScoreText.Text = Settings.Default.Game2048BestScore.ToString();
         }
 
         private void InitializeBoard()
         {
+            // 清空数组
+            Array.Clear(board, 0, board.Length);
+            score = 0;
+            ScoreText.Text = "0";
+
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
                 {
                     var tile = new Border
                     {
-                        Background = new SolidColorBrush(Color.FromRgb(205, 193, 180)),
+                        Background = GetTileColor(0),
                         Margin = new Thickness(5),
                         Child = new TextBlock
                         {
@@ -239,6 +256,14 @@ namespace Tianyu_System.Views
                 }
             }
             ScoreText.Text = score.ToString();
+
+            // 更新最高分
+            if (score > Settings.Default.Game2048BestScore)
+            {
+                Settings.Default.Game2048BestScore = score;
+                Settings.Default.Save();
+                BestScoreText.Text = score.ToString();
+            }
         }
 
         private bool IsGameOver()
@@ -249,7 +274,7 @@ namespace Tianyu_System.Views
                     if (board[i, j] == 0)
                         return false;
 
-            // 检查是否有相邻的相同数字
+            // 检查是否有可以合并的相邻数字
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
@@ -260,6 +285,14 @@ namespace Tianyu_System.Views
             }
 
             return true;
+        }
+
+        private void CheckGameOver()
+        {
+            if (IsGameOver())
+            {
+                MessageBox.Show($"游戏结束！\n最终得分：{score}", "2048");
+            }
         }
 
         private SolidColorBrush GetTileColor(int value)
@@ -280,6 +313,36 @@ namespace Tianyu_System.Views
                 case 2048: return new SolidColorBrush(Color.FromRgb(237, 194, 46));
                 default: return new SolidColorBrush(Color.FromRgb(238, 228, 218));
             }
+        }
+
+        private void SaveGameState()
+        {
+            var state = new GameState
+            {
+                Board = (int[,])board.Clone(),
+                Score = score
+            };
+            undoStack.Push(state);
+        }
+
+        private void UndoMove()
+        {
+            if (undoStack.Count > 0)
+            {
+                var state = undoStack.Pop();
+                board = (int[,])state.Board.Clone();
+                score = state.Score;
+                UpdateUI();
+            }
+        }
+
+        private void RestartButton_Click(object sender, RoutedEventArgs e)
+        {
+            GameGrid.Children.Clear();
+            InitializeBoard();
+            AddRandomTile();
+            AddRandomTile();
+            undoStack.Clear();
         }
     }
 } 
